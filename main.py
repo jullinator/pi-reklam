@@ -7,7 +7,7 @@ spots = db.child("spots")
 
 
 
-all_spots = spots.order_by_child("computer").equals_to("computer1").get()
+all_spots = spots.order_by_child("computer").equal_to("computer1").get()
 
 for spotChild in all_spots.each():
     spot = spotChild.val()
