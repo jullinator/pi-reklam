@@ -1,4 +1,4 @@
-import firebase
+from firebase import firebase
 
 db = firebase.database()
 def stream_handler(message):
