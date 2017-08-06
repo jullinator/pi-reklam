@@ -12,7 +12,8 @@ all_spots = spots.order_by_child("computer").equal_to("computer1").get()
 for spotChild in all_spots.each():
     spot = spotChild.val()
     storage.child("images/"+spot["image"]).download("images/"+spot["image"])
-    #gui.make_image(spot["image"], spot["image"])
+    gui.make_image(spot["image"], spot["image"])
+    gui.show_image(spot["image"])
 
 #gui.show_image()
 

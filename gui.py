@@ -15,6 +15,4 @@ def make_image (name, imageUrl):
 def show_image (name):
     canvas.create_image(0,0, image=images[name])
 
-
-def start_gui ():
-    root.mainloop()
+root.mainloop()
