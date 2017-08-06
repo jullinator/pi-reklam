@@ -1,9 +1,18 @@
 from firebase import firebase
 
 db = firebase.database()
-def stream_handler(message):
-    print(message["event"]) # put
-    print(message["path"]) # /-K7yGTTEp7O549EzTYtI
-    print(message["data"]) # {'title': 'Pyrebase', "body": "etc..."}
+spots = db.child("spots")
 
-my_stream = db.child("spots").stream(stream_handler)
+
+
+all_spots = spots.order_by_child("computer").equals_to("computer1").get()
+
+for spot in all_spots.each():
+    print(spot.val())
+
+
+
+#def stream_handler(message):
+#    print(message["event"]) # put
+#    print(message["path"]) # /-K7yGTTEp7O549EzTYtI
+#    print(message["data"]) # {'title': 'Pyrebase', "body": "etc..."}
