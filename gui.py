@@ -1,4 +1,4 @@
-from Tkinter import *
+from tkinter import *
 
 root = Tk()
 screen_width = root.winfo_screenwidth()
